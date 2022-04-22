@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -10,6 +11,13 @@ import Quiz from './Pages/Quiz/Quiz';
 import Result from './Pages/Result/Result';
 
 function App() {
+  const [name, setName] = useState("")
+
+
+  const fetchQuestions = () => {
+
+  }
+
   return (
     <BrowserRouter>
       <div className="app" style={{ backgroundImage: 'url("/ques1.png")' }}>
@@ -17,7 +25,8 @@ function App() {
 
         <Switch>
           <Route path="/" exact>
-            <Home />
+            <Home name={name} setName={setName}
+              fetchQuestions={fetchQuestions} />
           </Route>
           <Route path="/quiz" exact>
             <Quiz />
