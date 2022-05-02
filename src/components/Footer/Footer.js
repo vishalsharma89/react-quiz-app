@@ -6,7 +6,7 @@ const Footer = () => {
         marginBottom: 10,
       }}
     >
-      Made with by Vishal Sharma
+      Made by Vishal Sharma
     </div>
   );
 };
